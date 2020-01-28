@@ -39,7 +39,15 @@ import grass.script as gs
 
 
 def main():
-    options, flags = gs.parser()
+    """Contains the main processing and executes all other functions"""
+    # Get the parsed parameters as dictionaries
+    # We are using unused_ for flags to tell Pylint that we know this variable
+    # is unused (our modules does not have any flags).
+    options, unused_flags = gs.parser()
+    # Put parameter values into variables
+    # This is not necessary, but advantageous for longer code as the variable
+    # name can be better checked than a dictionary key.
+    # The names don't have to be the same as the parameter names.
     a_input = options['a_input']
     b_input = options['b_input']
     output = options['output']
