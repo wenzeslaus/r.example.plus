@@ -11,8 +11,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install GRASS GIS and other dependencies
       run: |
-        apt-get update -qq
-        apt-get install -y -qq grass grass-dev grass-doc wget
+        sudo apt-get update -qq
+        sudo apt-get install -y -qq grass grass-dev grass-doc wget
     - name: Fix GRASS GIS installation for g.extension
       run: |
         wget https://grass.osgeo.org/grass74/manuals/grass_logo.png
