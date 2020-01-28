@@ -1,0 +1,43 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install GRASS GIS and other dependencies
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y -qq grass grass-dev grass-doc wget
+    - name: Fix GRASS GIS installation for g.extension (needed for Ubuntu 18.04 grass packages)
+      run: |
+        wget https://grass.osgeo.org/grass74/manuals/grass_logo.png
+        wget https://grass.osgeo.org/grass74/manuals/grassdocs.css
+        sudo mv grass_logo.png /usr/lib/grass74/docs/html/grass_logo.png
+        sudo mv grassdocs.css /usr/lib/grass74/docs/html/grassdocs.css
+    - name: Create a temporary location (needed for 7.4 and below)
+      run: |
+        grass -c EPSG:4326 ~/grasstmploc -e
+    - name: Chanage shebang to just Python (7.4 needs python2)
+      run: |
+        sed -i s/python3/python/g r.example.plus.py
+        sed -i s/python3/python/g testsuite/test_r_example_plus.py
+    - name: Install the module to directory called build
+      run: |
+        grass ~/grasstmploc/PERMANENT --exec g.extension extension=${{ github.event.repository.name }} url=. prefix=build --verbose
+    - name: Copy the page as index.html
+      run: |
+        cp build/docs/html/${{ github.event.repository.name }}.html public/index.html
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./build/docs/html
