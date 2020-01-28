@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GRASS GIS manual: r.example.plus</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="grassdocs.css" type="text/css">
+</head>
+<body bgcolor="white">
+<div id="container">
+
+<a href="file:///usr/lib/grass74/docs/html/index.html"><img src="grass_logo.png" alt="GRASS logo"></a>
+<hr class="header">
+
+<h2>NAME</h2>
+<em><b>r.example.plus</b></em>  - Adds the values of two rasters (A + B)
+<h2>KEYWORDS</h2>
+<a href="file:///usr/lib/grass74/docs/html/raster.html">raster</a>, <a href="file:///usr/lib/grass74/docs/html/topic_algebra.html">algebra</a>, <a href="file:///usr/lib/grass74/docs/html/keywords.html#sum">sum</a>
+<h2>SYNOPSIS</h2>
+<div id="name"><b>r.example.plus</b><br></div>
+<b>r.example.plus --help</b><br>
+<div id="synopsis"><b>r.example.plus</b> <b>a_input</b>=<em>name</em> <b>b_input</b>=<em>name</em> <b>output</b>=<em>name</em>  [--<b>overwrite</b>]  [--<b>help</b>]  [--<b>verbose</b>]  [--<b>quiet</b>]  [--<b>ui</b>] 
+</div>
+
+<div id="flags">
+<h3>Flags:</h3>
+<dl>
+<dt><b>--overwrite</b></dt>
+<dd>Allow output files to overwrite existing files</dd>
+<dt><b>--help</b></dt>
+<dd>Print usage summary</dd>
+<dt><b>--verbose</b></dt>
+<dd>Verbose module output</dd>
+<dt><b>--quiet</b></dt>
+<dd>Quiet module output</dd>
+<dt><b>--ui</b></dt>
+<dd>Force launching GUI dialog</dd>
+</dl>
+</div>
+
+<div id="parameters">
+<h3>Parameters:</h3>
+<dl>
+<dt><b>a_input</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of input raster A in an expression A + B</dd>
+<dd>Name of input raster map</dd>
+
+<dt><b>b_input</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of input raster B in an expression A + B</dd>
+<dd>Name of input raster map</dd>
+
+<dt><b>output</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of result of an expression A + B</dd>
+<dd>Name for output raster map</dd>
+
+</dl>
+</div>
+<div class="toc">
+<h4 class="toc">Table of contents</h4>
+<ul class="toc">
+    <li class="toc"><a href="#description" class="toc">DESCRIPTION</a></li>
+    <li class="toc"><a href="#see-also" class="toc">SEE ALSO</a></li>
+    <li class="toc"><a href="#authors" class="toc">AUTHORS</a></li>
+</ul>
+</div>
+<h2><a name="description">DESCRIPTION</a></h2>
+
+<em>r.example.plus</em> adds two raster maps together.
+These raster maps are specified as parameters <b>araster</b> and <b>braster</b>.
+
+This is an example of a GRASS GIS module implemeneted in Python.
+
+<h2><a name="see-also">SEE ALSO</a></h2>
+
+<em>
+<a href="file:///usr/lib/grass74/docs/html/g.region.html">g.region</a>,
+<a href="file:///usr/lib/grass74/docs/html/r.mapcalc.html">r.mapcalc</a>
+</em>
+
+<h2><a name="authors">AUTHORS</a></h2>
+
+Vaclav Petras, <a href="https://geospatial.ncsu.edu/geoforall/">NCSU GeoForAll Lab</a><h2>SOURCE CODE</h2>
+<p>Available at: <a href="https://trac.osgeo.org/grass/browser/grass-addons/grass7/raster/r.example.plus">r.example.plus source code</a> (<a href="https://trac.osgeo.org/grass/log/grass-addons/grass7/raster/r.example.plus">history</a>)</p>
+<hr class="header">
+<p>
+<a href="file:///usr/lib/grass74/docs/html/index.html">Main index</a> |
+<a href="file:///usr/lib/grass74/docs/html/raster.html">Raster index</a> |
+<a href="file:///usr/lib/grass74/docs/html/topics.html">Topics index</a> |
+<a href="file:///usr/lib/grass74/docs/html/keywords.html">Keywords index</a> |
+<a href="file:///usr/lib/grass74/docs/html/graphical_index.html">Graphical index</a> |
+<a href="file:///usr/lib/grass74/docs/html/full_index.html">Full index</a>
+</p>
+<p>
+&copy; 2003-2018
+<a href="http://grass.osgeo.org">GRASS Development Team</a>,
+GRASS GIS 7.4.0 Reference Manual
+</p>
+
+</div>
+</body>
+</html>
