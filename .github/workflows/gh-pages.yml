@@ -34,7 +34,7 @@ jobs:
         grass ~/grasstmploc/PERMANENT --exec g.extension extension=${{ github.event.repository.name }} url=. prefix=build --verbose
     - name: Copy the page as index.html
       run: |
-        cp build/docs/html/${{ github.event.repository.name }}.html public/index.html
+        cp build/docs/html/${{ github.event.repository.name }}.html build/docs/html/index.html
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
