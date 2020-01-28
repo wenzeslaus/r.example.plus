@@ -31,7 +31,14 @@ jobs:
     - name: Install the module
       run: |
         grass ~/grasstmploc/PERMANENT --exec g.extension extension=$MODULE_NAME url=. --verbose
+    - name: Cache data for testing
+      id: cache-nc_spm_08_grass7
+      uses: actions/cache@v1
+      with:
+        path: nc_spm_08_grass7
+        key: ${{ runner.os }}-nc_spm_08_grass7
     - name: Get sample data for testing
+      if: steps.cache-nc_spm_08_grass7.outputs.cache-hit != 'true'
       run: |
         grass ~/grasstmploc/PERMANENT --exec g.extension g.download.location --verbose
         grass ~/grasstmploc/PERMANENT --exec g.download.location url=https://grass.osgeo.org/sampledata/north_carolina/nc_spm_08_grass7.tar.gz --verbose
