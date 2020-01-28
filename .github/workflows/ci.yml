@@ -17,8 +17,8 @@ jobs:
       run: |
         wget https://grass.osgeo.org/grass74/manuals/grass_logo.png
         wget https://grass.osgeo.org/grass74/manuals/grassdocs.css
-        mv grass_logo.png /usr/lib/grass74/docs/html/grass_logo.png
-        mv grassdocs.css /usr/lib/grass74/docs/html/grassdocs.css
+        sudo mv grass_logo.png /usr/lib/grass74/docs/html/grass_logo.png
+        sudo mv grassdocs.css /usr/lib/grass74/docs/html/grassdocs.css
     - name: Create a temporary location (needed for 7.4 and below)
       run: |
         grass -c EPSG:4326 ~/grasstmploc -e
