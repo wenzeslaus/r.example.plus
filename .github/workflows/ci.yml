@@ -26,9 +26,11 @@ jobs:
       run: |
         sed -i s/python3/python/g r.example.plus.py
         sed -i s/python3/python/g testsuite/test_r_example_plus.py
+    - name: Set 
+      run: echo "::set-env name=MODULE_NAME::$(echo $GITHUB_REPOSITORY | sed s+.*/++g)"
     - name: Install the module
       run: |
-        grass ~/grasstmploc/PERMANENT --exec g.extension extension=${{ github.repository }} url=. --verbose
+        grass ~/grasstmploc/PERMANENT --exec g.extension extension=$MODULE_NAME url=. --verbose
     - name: Get sample data for testing
       run: |
         grass ~/grasstmploc/PERMANENT --exec g.extension g.download.location --verbose
