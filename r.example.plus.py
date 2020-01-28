@@ -48,11 +48,11 @@ def main():
     # This is not necessary, but advantageous for longer code as the variable
     # name can be better checked than a dictionary key.
     # The names don't have to be the same as the parameter names.
-    a_input = options['a_input']
-    b_input = options['b_input']
-    output = options['output']
+    a_input = options["a_input"]
+    b_input = options["b_input"]
+    output = options["output"]
 
-    gs.mapcalc('{r} = {a} + {b}'.format(r=output, a=a_input, b=b_input))
+    gs.mapcalc("{r} = {a} + {b}".format(r=output, a=a_input, b=b_input))
 
     return 0
 
