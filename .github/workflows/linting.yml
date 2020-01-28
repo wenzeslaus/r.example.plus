@@ -25,4 +25,4 @@ jobs:
         flake8 --ignore=E265,F821,E501,W503,E203 --max-line-length=88 --count --statistics --show-source .
     - name: Lint with Pylint
       run: |
-        pylint --disable=R,bad-continuation,fixme,import-error --additional-builtins=_ --reports=n --score=n -j0 r.example.plus.py
+        pylint --disable=R,bad-continuation,fixme,import-error --additional-builtins=_ --reports=n --score=n -j0 ${{ github.event.repository.name }}.py
