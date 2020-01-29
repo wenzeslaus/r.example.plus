@@ -64,7 +64,9 @@ working.
 For the workflow uploading documentation to GitHub Pages to
 work, you will need you to
 [set up Deploy key and a Secret](https://github.com/marketplace/actions/github-pages-action#1-add-ssh-deploy-key)
-for your repository.
+for your repository. Once the keys are in place, the online documentation
+will be published as GitHub Pages website automatically.
+The URL for the website is available in the Settings of your repository.
 
 ## Files which usually are not part of a module
 
