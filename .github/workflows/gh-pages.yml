@@ -28,7 +28,6 @@ jobs:
     - name: Chanage shebang to just Python (7.4 needs python2)
       run: |
         sed -i s/python3/python/g r.example.plus.py
-        sed -i s/python3/python/g testsuite/test_r_example_plus.py
     - name: Install the module to directory called build
       run: |
         grass ~/grasstmploc/PERMANENT --exec g.extension extension=${{ github.event.repository.name }} url=. prefix=build --verbose
