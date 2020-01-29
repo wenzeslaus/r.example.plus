@@ -14,13 +14,54 @@ it is showing:
 
 ## How to use this project
 
-* Just download the files or clone the repository using Git.
+### Start by using this as a template
+
+GitHub has a mechanism how to use this repository as a template:
+
+* On GitHub, press *Use this template*.
+* Name the project and provide other repository info.
+* Clone the project using Git.
+
+### Start by Get the copy
+
+Alternatively, e.g., when not using GitHub, you can get the files in
+a standard way:
+
+* Just download the files as ZIP or clone the repository using Git.
 * Copy them to your new project directory.
 
-Alternatively, if you are thinking about forking it on GitHub and starting from there,
-it is possible.
-However, the only way how to remove the fork relationship is cloning locally, deleting the fork
-on GitHub, creating a new project and pushing into it.
+### Rename
+
+Once you have the files in place, you need to do some renaming:
+
+* Rename files to fit the name of your new module.
+* Search all the content of all files for r.example.plus and
+  r_example_plus and replace that with your module name.
+
+### Renaming protip
+
+You will probably replace the names in the files as you are adding your
+functionality, but if you are using Bash, you may want to try these
+commands (do it before you make any changes to the files, so you can
+review the changes with git):
+
+```
+FILES="Makefile *.* */*.* .github/*/*.*"
+sed -i 's/r\.example\.plus/r.minus/g' $FILES
+sed -i 's/r_example_plus/r_minus/g' $FILES
+```
+
+### Getting the GitHub Actions work
+
+If you have the repository on GitHub, you can also reuse the GitHub
+Actions defined in the repository (under `.github`). Initially, most of
+them will fail, but once you do the renaming, most of them should start
+working.
+
+For the workflow uploading documentation to GitHub Pages to
+work, you will need you to
+[set up Deploy key and a Secret](https://github.com/marketplace/actions/github-pages-action#1-add-ssh-deploy-key)
+for your repository.
 
 ## Files which usually are not part of a module
 
