@@ -1,8 +1,9 @@
 # r.example.plus: GRASS GIS module example in Python
 
 ![CI](https://github.com/wenzeslaus/r.example.plus/workflows/CI/badge.svg)
-![Code quality](https://github.com/wenzeslaus/r.example.plus/workflows/Code%20quality/badge.svg)
-![Black code style](https://github.com/wenzeslaus/r.example.plus/workflows/Black%20code%20style/badge.svg)
+![Code quality check](https://github.com/wenzeslaus/r.example.plus/workflows/Code%20quality/badge.svg)
+![Black code style check](https://github.com/wenzeslaus/r.example.plus/workflows/Black%20code%20style/badge.svg)
+![Deploy online documentation](https://github.com/wenzeslaus/r.example.plus/workflows/Online%20documentation/badge.svg)
 
 This is an example of a GRASS GIS module for processing rasters in Python,
 it is showing:
