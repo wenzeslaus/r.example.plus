@@ -1,11 +1,11 @@
 # r.example.plus: GRASS GIS module example in Python
 
 [![GRASS GIS module](https://img.shields.io/badge/GRASS%20GIS-module-%23009000)](https://grass.osgeo.org/)
-![CI](https://github.com/wenzeslaus/r.example.plus/workflows/CI/badge.svg)
-![Code quality check](https://github.com/wenzeslaus/r.example.plus/workflows/Code%20quality%20check/badge.svg)
+[![CI](https://github.com/wenzeslaus/r.example.plus/workflows/CI/badge.svg)](https://github.com/wenzeslaus/r.example.plus/actions?query=workflow%3A%22CI%22)
+[![Code quality check](https://github.com/wenzeslaus/r.example.plus/workflows/Code%20quality%20check/badge.svg)](https://github.com/wenzeslaus/r.example.plus/actions?query=workflow%3A%22Code%20quality%20check%22)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-![Black code style check](https://github.com/wenzeslaus/r.example.plus/workflows/Black%20code%20style%20check/badge.svg)
-![Deploy online documentation](https://github.com/wenzeslaus/r.example.plus/workflows/Deploy%20online%20documentation/badge.svg)
+[![Black code style check](https://github.com/wenzeslaus/r.example.plus/workflows/Black%20code%20style%20check/badge.svg)](https://github.com/wenzeslaus/r.example.plus/actions?query=workflow%3A%22Black%20code%20style%20check%22)
+[![Deploy online documentation](https://github.com/wenzeslaus/r.example.plus/workflows/Deploy%20online%20documentation/badge.svg)](https://github.com/wenzeslaus/r.example.plus/actions?query=workflow%3A%22Deploy%20online%20documentation%22)
 
 This is an example of a GRASS GIS module for processing rasters in Python,
 it is showing:
