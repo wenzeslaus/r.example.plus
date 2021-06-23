@@ -27,7 +27,7 @@ jobs:
         grass -c EPSG:4326 ~/grasstmploc -e
     - name: Chanage shebang to Python3
       run: |
-        sed -i s/python/python3/g r.example.plus.py
+        sed -i s/python3/python3/g r.example.plus.py
     - name: Install the module to directory called build
       run: |
         grass ~/grasstmploc/PERMANENT --exec g.extension extension=${{ github.event.repository.name }} url=. prefix=build --verbose
