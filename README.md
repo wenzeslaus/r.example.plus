@@ -40,6 +40,8 @@ Once you have the files in place, you need to do some renaming:
 * Rename files to fit the name of your new module.
 * Search all the content of all files for r.example.plus and
   r_example_plus and replace that with your module name.
+* Search all the content of all files for wenzeslaus and
+  replace that with your github user name.
 
 ### Renaming protip
 
@@ -52,6 +54,7 @@ review the changes with git):
 FILES="Makefile *.* */*.* .github/*/*.*"
 sed -i 's/r\.example\.plus/r.minus/g' $FILES
 sed -i 's/r_example_plus/r_minus/g' $FILES
+sed -i 's/wenzeslaus/YOUR_GIHUB_USERNAME/g' $FILES
 ```
 
 ### Getting the GitHub Actions work
@@ -61,11 +64,10 @@ Actions defined in the repository (under `.github`). Initially, most of
 them will fail, but once you do the renaming, most of them should start
 working.
 
-For the workflow uploading documentation to GitHub Pages to
-work, you will need you to
-[set up Deploy key and a Secret](https://github.com/marketplace/actions/github-pages-action#1-add-ssh-deploy-key)
-for your repository. Once the keys are in place, the online documentation
-will be published as GitHub Pages website automatically.
+The workflow for uploading documentation to GitHub Pages should work automatically
+after renaming. However, for the pages to become available, you will need to make the
+repository public (or have an enterprise account). 
+The online documentation will be published as GitHub Pages website automatically.
 The URL for the website is available in the Settings of your repository.
 
 ## Files which usually are not part of a module
